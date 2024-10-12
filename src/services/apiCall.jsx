@@ -1,16 +1,11 @@
-import React from 'react'
+import axios from "axios";
 
-const apiCall = async (method,url,data = null) => {
-    const option = {
-        method,
-        url,
-        data,
+export const apiCall = async (method, url, data = null) => {
+  const option = {
+    method,
+    url,
+    data,
+  };
+  const response = await axios(option);
+  return response.data;
 };
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default apiCall
